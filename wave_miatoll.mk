@@ -13,12 +13,19 @@
 # limitations under the License.
 
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/wave/configs/common.mk)
+
+# Maintainer Props
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.wave.maintainer_name=RiteshSahany
+
+TARGET_USES_AOSP_CHARGER := true
+VANILLA_BUILD := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := lineage_miatoll
+PRODUCT_NAME := wave_miatoll
 PRODUCT_DEVICE := miatoll
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SM6250
